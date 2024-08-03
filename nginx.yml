@@ -17,7 +17,7 @@ spec:
       mountPath: /web-content
   - name: create-html
     image: busybox
-    command: ["sh", "-c", "echo 'Hello, World! Your Pod IP is: ' > /web-content/index.html; cat /web-content/ip.txt >> /web-content/index.html; echo 'Created index.html with the Pod IP'"]
+    command: ["sh", "-c", "echo 'Make sure to launch your Sonic pod! Your Pod IP is: ' > /web-content/index.html; cat /web-content/ip.txt >> /web-content/index.html; echo 'Created index.html with the Pod IP'"]
     volumeMounts:
     - name: web-content
       mountPath: /web-content
